@@ -1,0 +1,23 @@
+x=int(input())
+y=int(input())
+l=int(input())
+c1=int(input())
+c2=int(input())
+c3=int(input())
+c4=int(input())
+c5=int(input())
+c6=int(input())
+t,n,h = 0,0,0
+e = (x+y)*2
+if max(y,x) < l:
+    n = l-max(x,y)
+    h = max(0,l-e)
+    l -=n
+    n -=h
+    t += min((c2+c4+c5+c6)*l,c1*l,(c2+c3)*l)
+    t += min((c2+c4+c5+c6)*n,(c2+c3)*n)
+    e = e - (l + n)
+    t += e*(c4+c5)
+    t += (c2+c6)*h
+    t = str(t)
+    print(t)
